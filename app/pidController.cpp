@@ -1,6 +1,13 @@
 #include "pidController.h"
 #include <iostream>
 
+pidController::pidController(double KP,double KI,double KD, double target){
+    kp = KP;
+    ki = KI;
+    kd = KD;
+    target_velocity = target;
+}
+
 void pidController::SetKp(double new_kp){
     std::cout << "Updated kp" << std::endl;
 }
@@ -28,8 +35,23 @@ double pidController::GetKd(){
     return kd;
 }
 
-double Compute(double p_err,double d_err,double i_err){
+double Compute(double velocty){
     double gain = 0; 
     return gain;
+}
+
+double CalculatePError(){
+    double p_error = 0;
+    return p_error;
+}
+
+double CalculateIError(){
+    double i_error = 0;
+    return i_error;
+}
+
+double CalculateDError(){
+    double d_error = 0;
+    return d_error;
 }
 
