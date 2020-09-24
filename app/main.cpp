@@ -1,8 +1,10 @@
 #include <iostream>
-#include <lib.hpp>
+#include "pidController.h"
 
 int main()
 {
-    dummy();
+    pidController controller;
+    controller.set_kp(5);
+    controller.get_kp(); 
     return 0;
 }

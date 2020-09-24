@@ -3,7 +3,12 @@
 [![Coverage Status](https://coveralls.io/repos/github/jaybrecht/acme_PID_controller/badge.svg?branch=master)](https://coveralls.io/github/jaybrecht/acme_PID_controller?branch=master)
 ---
 
-## Overview
+## Authors
+
+Driver: Justin Albrecht
+Navigator: Govind Ajith Kumar
+
+<!-- ## Overview
 
 Simple starter C++ project with:
 
@@ -124,3 +129,4 @@ perspetive view (or Windows->Perspective->Open Perspective->C/C++).
 - Git
 
     It is possible to manage version control through Eclipse and the git plugin, but it typically requires creating another project. If you're interested in this, try it out yourself and contact me on Canvas.
+ -->
