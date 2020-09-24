@@ -3,8 +3,8 @@
 
 int main()
 {
-    pidController controller;
-    controller.set_kp(5);
-    controller.get_kp(); 
+    // pidController controller;
+    // controller.SetKp(5);
+    // controller.GetKp(); 
     return 0;
 }
