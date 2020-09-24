@@ -35,22 +35,23 @@ double pidController::GetKd(){
     return kd;
 }
 
-double Compute(double velocty){
+double pidController::Compute(double velocty){
     double gain = 0; 
+    std::cout << "Running Compute()" << std::endl;
     return gain;
 }
 
-double CalculatePError(){
+double pidController::CalculatePError(){
     double p_error = 0;
     return p_error;
 }
 
-double CalculateIError(){
+double pidController::CalculateIError(){
     double i_error = 0;
     return i_error;
 }
 
-double CalculateDError(){
+double pidController::CalculateDError(){
     double d_error = 0;
     return d_error;
 }
