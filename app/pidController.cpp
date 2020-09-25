@@ -37,7 +37,7 @@ double pidController::GetKd(){
 
 double pidController::Compute(double velocty){
     double gain = 0; 
-    std::cout << "Running Compute()" << std::endl;
+    // std::cout << "Running Compute()" << std::endl;
     return gain;
 }
 

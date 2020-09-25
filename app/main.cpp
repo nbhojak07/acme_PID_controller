@@ -1,13 +1,10 @@
 #include <iostream>
 #include "pidController.h"
-#include "TestPID.h"
 
 int main()
 {
-    TestPID tester;
-    tester.TestCompute();
-    // pidController controller;
-    // controller.SetKp(5);
-    // controller.GetKp(); 
+    pidController controller(1,1,1,1);
+    controller.Compute(0);
+
     return 0;
 }
