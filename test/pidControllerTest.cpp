@@ -4,8 +4,8 @@
  * @file pidControllerTest.cpp
  *
  * @authors
- * Govind Ajith Kumar (govindak-umd) \n
- * Justin Albrecht(jaybrecht) \n
+ * Navigator- Govind Ajith Kumar (govindak-umd) \n
+ * Driver- Justin Albrecht(jaybrecht) \n
  *
  * @version 1.0
  *
@@ -50,7 +50,7 @@
  * @brief This Test function aims to test the Compute method of the
  *        pidController class.
  * @param Computetest : - Test Name
- * @param errorCalculationTest : - Test to verify the return for zero input
+ * @param zero_input : - Test to verify the return for zero input
  * @return none
  */
 
@@ -60,16 +60,17 @@ TEST(Computetest, zero_input) {
   double kd = 1;
   double target = 1;
   pidController controller(kp, ki, kd, target);
-  double a = controller.Compute(0, {1, 2, 3, 4});
+  std::vector<double> err_vec = {1.0, 2.0, 3.0, 4.0};
+  double a = controller.Compute(0, err_vec);
   double b = 9;
   EXPECT_EQ(b, a);
 }
 
 /**
- * @brief This Test function aims to test the kp getter of the
+ * @brief This Test function aims to test the getters and setters of the
  *        pidController class.
  * @param GetterTest : - Test Name
- * @param Computetest : - Test to verify working of getter and setter
+ * @param TestForCorrectGet : - Test to verify working of getter and setter
  * @return none
  */
 
@@ -81,7 +82,16 @@ TEST(GetterTest, TestForCorrectGet) {
   pidController controller(kp, ki, kd, target);
 
   controller.SetKp(2.5);
-  double a = controller.GetKp();
+  controller.SetKd(2.5);
+  controller.SetKi(2.5);
+
+  double a1 = controller.GetKp();
+  double a2 = controller.GetKd();
+  double a3 = controller.GetKi();
   double b = 2.5;
-  EXPECT_EQ(b, a);
+  EXPECT_EQ(b, a1);
+  EXPECT_EQ(b, a2);
+  EXPECT_EQ(b, a3);
 }
+
+

@@ -8,7 +8,6 @@ include_directories(
 add_executable(
     cpp-test
     main.cpp
-    test.cpp
     pidControllerTest.cpp
     ../app/pidController.cpp
 )

@@ -4,8 +4,8 @@
  * @file pidController.cpp
  *
  * @authors
- * Govind Ajith Kumar (govindak-umd) \n
- * Justin Albrecht(jaybrecht) \n
+ * Navigator- Govind Ajith Kumar (govindak-umd) \n
+ * Driver- Justin Albrecht(jaybrecht) \n
  *
  * @version 1.0
  *
@@ -125,7 +125,7 @@ double pidController::GetKd() {
  * @param velocity
  * @return The gain value
  */
-double pidController::Compute(double velocity, std::vector<double> err_vec) {
+double pidController::Compute(double velocity, const std::vector<double> &err_vec) {
   double gain = 0;
   // std::cout << "Running Compute()" << std::endl;
   return gain;

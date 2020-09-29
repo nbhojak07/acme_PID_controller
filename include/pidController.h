@@ -4,8 +4,8 @@
  * @file pidController.h
  *
  * @authors
- * Govind Ajith Kumar (govindak-umd) \n
- * Justin Albrecht(jaybrecht) \n
+ * Navigator- Govind Ajith Kumar (govindak-umd) \n
+ * Driver- Justin Albrecht(jaybrecht) \n
  *
  * @version 1.0
  *
@@ -59,7 +59,7 @@ class pidController {
   double GetKp();
   double GetKi();
   double GetKd();
-  double Compute(double velocity, std::vector<double> err_vec);
+  double Compute(double velocity, const std::vector<double> &err_vec);
   double CalculatePError(double curr_err);
   double CalculateIError(std::vector<double> err_vec, double curr_err);
   double CalculateDError(double curr_err, std::vector<double> err_vec);

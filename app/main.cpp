@@ -4,8 +4,8 @@
  * @file main.cpp
  *
  * @authors
- * Govind Ajith Kumar (govindak-umd) \n
- * Justin Albrecht(jaybrecht) \n
+ * Navigator- Govind Ajith Kumar (govindak-umd) \n
+ * Driver- Justin Albrecht(jaybrecht) \n
  *
  * @version 1.0
  *
