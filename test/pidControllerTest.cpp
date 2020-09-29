@@ -55,14 +55,18 @@
  */
 
 TEST(Computetest, zero_input) {
-  pidController controller(1, 1, 1, 1);
-  double a = controller.Compute(0);
-  double b = 0;
+  double kp = 1;
+  double ki = 1;
+  double kd = 1;
+  double target = 1;
+  pidController controller(kp, ki, kd, target);
+  double a = controller.Compute(0, {1, 2, 3, 4});
+  double b = 9;
   EXPECT_EQ(b, a);
 }
 
 /**
- * @brief This Test function aims to test the Compute method of the
+ * @brief This Test function aims to test the kp getter of the
  *        pidController class.
  * @param GetterTest : - Test Name
  * @param Computetest : - Test to verify working of getter and setter
@@ -70,7 +74,11 @@ TEST(Computetest, zero_input) {
  */
 
 TEST(GetterTest, TestForCorrectGet) {
-  pidController controller(1, 1, 1, 1);
+  double kp = 1;
+  double ki = 1;
+  double kd = 1;
+  double target = 1;
+  pidController controller(kp, ki, kd, target);
 
   controller.SetKp(2.5);
   double a = controller.GetKp();

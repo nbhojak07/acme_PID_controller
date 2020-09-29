@@ -66,7 +66,6 @@ pidController::pidController(double KP, double KI, double KD, double target) {
  * @param new_kp The updated proportional Constant
  */
 void pidController::SetKp(double new_kp) {
-  std::cout << "Updated kp" << std::endl;
 }
 
 /**
@@ -77,7 +76,6 @@ void pidController::SetKp(double new_kp) {
  */
 
 void pidController::SetKi(double new_ki) {
-  std::cout << "Updated ki" << std::endl;
 }
 
 /**
@@ -87,7 +85,6 @@ void pidController::SetKi(double new_ki) {
  * @param new_kd The updated derivative constant
  */
 void pidController::SetKd(double new_kd) {
-  std::cout << "Updated kd" << std::endl;
 }
 
 /**
@@ -98,8 +95,7 @@ void pidController::SetKd(double new_kd) {
  */
 
 double pidController::GetKp() {
-  std::cout << "Kp: " << kp << std::endl;
-  return kp;
+  return 0;
 }
 
 /**
@@ -109,8 +105,7 @@ double pidController::GetKp() {
  * @return Returns the Ki value, stored as a private variable
  */
 double pidController::GetKi() {
-  std::cout << "Ki: " << ki << std::endl;
-  return ki;
+  return 0;
 }
 
 /**
@@ -120,8 +115,7 @@ double pidController::GetKi() {
  * @return Returns the Kd value, stored as a private variable
  */
 double pidController::GetKd() {
-  std::cout << "Kd: " << kd << std::endl;
-  return kd;
+  return 0;
 }
 
 /**
@@ -131,7 +125,7 @@ double pidController::GetKd() {
  * @param velocity
  * @return The gain value
  */
-double pidController::Compute(double velocity) {
+double pidController::Compute(double velocity, std::vector<double> err_vec) {
   double gain = 0;
   // std::cout << "Running Compute()" << std::endl;
   return gain;
@@ -143,7 +137,7 @@ double pidController::Compute(double velocity) {
  *
  * @return The proportional error of the system
  */
-double pidController::CalculatePError() {
+double pidController::CalculatePError(double curr_err) {
   double p_error = 0;
   return p_error;
 }
@@ -154,7 +148,7 @@ double pidController::CalculatePError() {
  *
  * @return The integral error of the system
  */
-double pidController::CalculateIError() {
+double pidController::CalculateIError(std::vector<double> err_vec, double curr_err) {
   double i_error = 0;
   return i_error;
 }
@@ -166,7 +160,7 @@ double pidController::CalculateIError() {
  * @return The derivative error of the system
  */
 
-double pidController::CalculateDError() {
+double pidController::CalculateDError(double curr_err, std::vector<double> err_vec) {
   double d_error = 0;
   return d_error;
 }
