@@ -42,9 +42,10 @@
  * This is a test function to test the methods of the PID controller implementation.
  */
 
-#include <iostream>
+
 #include <gtest/gtest.h>
 #include "pidController.h"
+#include <iostream>
 
 /**
  * @brief This Test function aims to test the Compute method of the
