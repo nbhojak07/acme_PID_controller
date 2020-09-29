@@ -3,10 +3,16 @@
 [![Coverage Status](https://coveralls.io/repos/github/jaybrecht/acme_PID_controller/badge.svg?branch=master)](https://coveralls.io/github/jaybrecht/acme_PID_controller?branch=master)
 ---
 
-## Authors
+## Authors Part 1
 
 Driver: Justin Albrecht
 Navigator: Govind Ajith Kumar
+
+## Authors Part 2
+```
+Driver -Nidhi Bhojak
+Navigator-Kartik Venkat
+```
 
 <!-- ## Overview
 
